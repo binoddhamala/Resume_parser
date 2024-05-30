@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-import Layout from "./Layout";
+import Navbar1 from "./Navbar1";
+import Footer from "../Footer";
 
-const Parser = () => {
+const Jobseeker = () => {
   const [uploadSuccess, setUploadSuccess] = useState(false);
   const navigate = useNavigate();
 
@@ -23,13 +24,13 @@ const Parser = () => {
     }
 
     setTimeout(() => {
-      navigate("/login");
+      navigate("/viewjob");
     }, 2000); 
   };
 
   return (
     <>
-    <Layout>
+    <Navbar1/>
     <div className="parser">
       <div className="parsing_container">
         <h1 data-aos="fade-right">
@@ -46,9 +47,9 @@ const Parser = () => {
         </div>
       </div>
     </div>
-    </Layout>
+    <Footer/>
     </>
   );
 };
 
-export default Parser;
+export default Jobseeker;
