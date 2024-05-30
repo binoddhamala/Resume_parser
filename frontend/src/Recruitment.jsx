@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Recruitment = () => {
   return (
@@ -14,7 +13,7 @@ const Recruitment = () => {
           <form>
             <label>Upload job description:</label>
             <input type="file" id="resume" accept=".pdf,.doc,.docx" />
-            <button type="submit"><Link to="/login">Upload</Link></button>
+            <button type="submit">Upload</button>
           </form>
         </div>
       </div>

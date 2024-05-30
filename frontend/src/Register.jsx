@@ -8,7 +8,9 @@ const Register = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [cpassword,setCPassword] = useState('')
-  const [registrationState, setRegistrationState] = useState('');
+  const [registrationState, setRegistrationState] = useState('')
+  const [role, setRole] = useState('');
+
   const navigate = useNavigate();
 
 
@@ -85,6 +87,17 @@ const Register = () => {
               autoComplete="off"
               required
             />
+            <select
+        className="dropdown"
+        name="role"
+        value={role}
+        onChange={(e) => setRole(e.target.value)}
+        required
+      >
+        <option value="" disabled>Select Role</option>
+        <option value="jobSeeker">Job Seeker</option>
+        <option value="jobRecruiter">Job Recruiter</option>
+      </select>
             <button type="submit" className="registerbtn">
               Register
             </button>

@@ -7,7 +7,6 @@ import Login from "./Login";
 import Register from "./Register";
 import Footer from "./Footer";
 import Recruitment from "./Recruitment";
-import HeroScreen from './Landing';
 
 const App = () => {
   return (
@@ -20,7 +19,6 @@ const App = () => {
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/heroscreen" element={<HeroScreen />} />
         </Routes>
         <Footer />
       </BrowserRouter>

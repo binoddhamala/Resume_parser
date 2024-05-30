@@ -20,7 +20,7 @@ const Login = () => {
         password
       }
     ).then(function(res) {
-      navigate('/heroscreen');
+      navigate('/');
       // Handle successful login
     }).catch(function(error) {
       console.error("Login error:", error);
