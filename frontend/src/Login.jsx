@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Layout from "./Layout";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -30,6 +31,7 @@ const Login = () => {
 
   return (
     <>
+    <Layout>
       <div className="login">
         <div className="login_container">
           <h1>Login</h1>
@@ -53,7 +55,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button type="submit"><Link to="/heroscreen">Sign in</Link></button>
+              <button type="submit"><Link to="/jobseeker">Sign in</Link></button>
               <p>
                 Don't have an account? <Link to="/register">Register Now</Link>
               </p>
@@ -61,6 +63,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      </Layout>
     </>
   );
 };

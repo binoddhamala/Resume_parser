@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react'
 import axios from "axios"
+import Layout from "./Layout";
 
 const Register = () => {
   const [username,setUsername] = useState('')
@@ -38,6 +39,7 @@ const Register = () => {
 
   return (
     <>
+    <Layout>
       <div className="register">
         <form onSubmit={handleSubmit}>
           <div className="register_form">
@@ -113,6 +115,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      </Layout>
     </>
   );
 };

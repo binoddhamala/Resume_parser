@@ -1,8 +1,10 @@
 import React from "react";
+import Layout from "./Layout";
 
 const Recruitment = () => {
   return (
     <>
+    <Layout>
       <div className="parser">
       <div className="parsing_container">
         <h1 data-aos="fade-right">
@@ -18,6 +20,7 @@ const Recruitment = () => {
         </div>
       </div>
     </div>
+    </Layout>
     </>
   );
 };
