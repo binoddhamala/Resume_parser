@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+a {
+  text-decoration: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,12 +35,8 @@ a {
   gap: 0.8rem;
   text-transform: capitalize;
 }
-.navbar .signin {
-  background-color: #2196f3;
-  border-radius: 1rem;
-}
+
 .navbar .signin:hover {
-  background-color: #0b7dda;
   color: #fff;
 }
 .navbar li a {
@@ -506,9 +506,19 @@ input[type="password"]:focus {
   justify-content: center;
   align-items: center;
 }
+
+
+.error {
+  color: red;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
 .register_form {
-  width: 80%;
-  padding: 3rem;
+  max-width: 40rem;
+  padding: 2rem;
+  margin: auto;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
