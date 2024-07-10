@@ -5,15 +5,16 @@ const Navbar2 = () => {
   return (
     <>
       <nav className="navbar">
-        <h1>Logo</h1>
+        <h1 style={{paddingLeft:'0.9rem'}}>Logo</h1>
         <ul>
+    
           <li>
             <Link to="/recruiter">Recruit</Link>
           </li>
-
           <li>
-            <Link to="/ranking">Ranking</Link>
-          </li>
+          <Link to="/list-job-desc">Job List</Link>
+        </li>
+     
           <li>
             <Link to={"/logout"} className="signin">
               Logout

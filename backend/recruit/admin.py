@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recruit,UploadFile
+from .models import Resume,JobDesc
 # Register your models here.
-admin.site.register(Recruit)
-admin.site.register(UploadFile)
+admin.site.register(Resume)
+admin.site.register(JobDesc)

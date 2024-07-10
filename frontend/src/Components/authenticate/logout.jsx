@@ -25,7 +25,7 @@ const Logout = () => {
         localStorage.removeItem('access_token');
         localStorage.removeItem('refresh_token');
         console.log('Logout successful');
-        // navigate('/login');
+        navigate('/login');
       } catch (error) {
         console.error('Logout failed:', error);
       }

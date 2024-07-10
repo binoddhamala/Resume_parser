@@ -1,14 +1,13 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Footer = () => {
   return (
-    <>
-      <div className="footer">
-        <p>
-        ©2023 Created By Circle
-        </p>
+    <footer className="footer">
+      <div className="container text-center">
+        <p className="mb-0">© 2024 Created By Circle</p>
       </div>
-    </>
+    </footer>
   );
 };
 

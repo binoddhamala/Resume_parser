@@ -58,7 +58,7 @@ const Login = () => {
       navigate('/recruiter');
 
     }else if(response.data.role === 'user'){
-    navigate('/jobseeker');
+    navigate('/available-job');
 
     }
     
@@ -96,7 +96,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button type="submit">Sign in</button>
+              <button type="submit">Login</button>
               <p>Forget Password ?<Link to='/forget-password'>click here</Link></p>
 
               <p>

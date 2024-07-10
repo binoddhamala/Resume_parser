@@ -5,17 +5,13 @@ const Navbar1 = () => {
   return (
     <>
       <nav className="navbar">
-        <h1>Logo</h1>
-        <ul>s
+        <h1 style={{paddingLeft:'0.9rem'}}>Logo</h1>
+        <ul>
           <li>
-            <Link to="/jobseeker">Resume Upload</Link>
-          </li>
-
-          <li>
-            <Link to="/viewjob">ViewJob</Link>
+            <Link to="/available-job">Jobs</Link>
           </li>
           <li>
-             <Link to={"/logout"} className="signin">
+            <Link to={"/logout"} className="signin">
               Logout
             </Link>
           </li>

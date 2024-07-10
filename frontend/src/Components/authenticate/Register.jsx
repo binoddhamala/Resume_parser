@@ -55,22 +55,41 @@ const Register = () => {
         name:username,email:email,password:password,password2:cpassword,role:role});
         console.log(response.data)
         setRegistrationState('success');
+
+        localStorage.setItem('access_token',response.data.token['access'])
+    localStorage.setItem('refresh_token',response.data.token['refresh'])
+    axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token['access']}`;
         //Handle the case
         if(role === 'recruiter'){
           navigate('/recruiter');
 
         }else if(role === 'user'){
-        navigate('/jobseeker');
+        navigate('/available-job');
 
           }
     }catch(error){
         // Handle error
-        if (error.response.data.errors['non_field_errors']) {
-          console.log(error.response.data); // Log the error response to debug
-          setRegistrationState(error.response.data.errors['non_field_errors'] || "Registration failed");
+        // if (error.response.data.errors['non_field_errors']) {
+        //   console.log(error.response.data); // Log the error response to debug
+        //   setRegistrationState(error.response.data.errors['non_field_errors'] || "Registration failed");
+        // } else {
+        //   console.log("Error during registration:", error);
+        //   setRegistrationState(error.response.data.errors['email']);
+        // }
+        if (error.response && error.response.data) {
+          const errors = error.response.data;
+    
+          if (errors.email) {
+            setRegistrationState(errors.email[0]);
+          } else if (errors.username) {
+            setRegistrationState(errors.username[0]);
+          } else if (errors.non_field_errors) {
+            setRegistrationState(errors.non_field_errors[0]);
+          } else {
+            setRegistrationState("Registration failed. Please try again.");
+          }
         } else {
-          console.log("Error during registration:", error);
-          setRegistrationState(error.response.data.errors['email']);
+          setRegistrationState("An unknown error occurred. Please try again.");
         }
       
     }
@@ -153,7 +172,7 @@ const Register = () => {
             <p><span style={{color:'red'}}>{registrationState}</span></p>
           
             <p>
-              Already have an account? <Link to="/login">Sign in</Link>
+              Already have an account? <Link to="/login">Login</Link>
             </p>
           </div>
         </form>

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <h1>Logo</h1>
+        <h1 style={{paddingLeft:'0.9rem'}}>Logo</h1>
         <ul>
           <li>
             <Link to="/">Home</Link>
